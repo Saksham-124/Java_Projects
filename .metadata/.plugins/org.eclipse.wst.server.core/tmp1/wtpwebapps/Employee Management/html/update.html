@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Update Profile</title>
+    <link rel="stylesheet" href="../css/update.css" />
+        
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="left-img">
+        <img src="https://cdn-icons-png.flaticon.com/512/921/921347.png" alt="Person Image"/>
+    </div>
+
+    <form action="../Update" method="post" class="form-box" onsubmit = "return confirmUpdate()">
+
+        <h2>Update Profile</h2>
+
+        <div class="input-group">
+            <label>Employee ID</label>
+            <input type="text" id="employeeId" disabled>
+            <input type="hidden" id="empHidden" name="employeeId">
+        </div>
+
+        <div class="input-group">
+            <label>Update First Name</label>
+            <input type="text" name="update_firstName" placeholder="Enter first name" required />
+        </div>
+
+        <div class="input-group">
+            <label>Update Last Name</label>
+            <input type="text" name="update_lastName" placeholder="Enter last name" required />
+        </div>
+        
+        <div class="input-group">
+            <label>Update Mobile Number</label>
+            <input type="number" name="update_mobile" placeholder="Enter Mobile No." required />
+        </div>
+
+        <div class="input-group">
+            <label>Update Email</label>
+            <input type="email" name="update_email" placeholder="Enter email" required />
+        </div>
+
+        <div class="input-group">
+            <label>Update Password</label>
+            <input type="password" name="update_password" placeholder="Enter new password" required />
+        </div>
+
+        <div class="input-group">
+            <label>Update Gender</label>
+            <select name="update_gender" required>
+                <option value="">Select gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn">Update Profile</button>
+
+    </form>
+
+</div>
+
+
+</body>
+
+    <script>
+    
+    const params = new URLSearchParams(window.location.search);
+    
+    const empId = params.get("id");
+
+    document.getElementById("employeeId").value = empId;
+    
+    document.getElementById("empHidden").value = empId; 
+    
+    function confirmUpdate() {
+    	
+    	return confirm("Are you sure you want to update this profile?");
+    	
+    }
+    
+	</script>
+
+</html>

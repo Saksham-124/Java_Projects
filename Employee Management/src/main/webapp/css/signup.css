@@ -1,0 +1,159 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #f8efe8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 1300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* LEFT SECTION */
+.left-section {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.arch-bg {
+    position: relative;
+    width: 500px;
+}
+
+.arch-bg .arch {
+	height: 80vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.arch-bg .person {
+    width: 380px;
+    position: relative;
+    z-index: 2;
+    display: block;
+    margin: 120px auto 0;
+}
+
+/* RIGHT SECTION */
+.right-section {
+    width: 50%;
+    padding: 20px 50px;
+}
+
+.right-section h2 {
+    font-size: 32px;
+    color: #3c3633;
+    margin-bottom: 30px;
+}
+
+/* INPUTS */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.row {
+    display: flex;
+    gap: 20px;
+}
+
+.half {
+    width: 50%;
+}
+
+.input-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #3c3633;
+}
+
+.input-box {
+    width: 100%;
+    margin-top: 6px;
+    padding: 15px;
+    border-radius: 30px;
+    border: 1.5px solid #d3c8c1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #fff;
+}
+
+.input-box input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+.icon {
+    font-size: 18px;
+}
+
+.eye {
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* GENDER */
+.gender-box {
+    margin-top: 10px;
+    display: flex;
+    gap: 30px;
+    font-size: 14px;
+    color: #3c3633;
+}
+
+.gender-box input {
+    margin-right: 5px;
+}
+
+/* BUTTON */
+.login-btn {
+    width: 70%;
+    padding: 15px;
+    border: none;
+    border-radius: 30px;
+    background: #f4c7a5;
+    color: #3c3633;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 10px 0 20px;
+}
+
+.or {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 14px;
+    color: #a89084;
+}
+
+.signup-text {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #3c3633;
+}
+
+.signup-text a {
+    color: #d67a2e;
+    text-decoration: none;
+    font-weight: 600;
+}

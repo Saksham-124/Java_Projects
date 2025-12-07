@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link rel="stylesheet" href="../css/signup.css">
+    
+    <script>
+    	const urlParams = new URLSearchParams(window.location.search);
+
+    	if (urlParams.get("success") == 1) {
+        alert("Registration Successful!");
+    	}
+
+    	if (urlParams.get("error") == 1) {
+        alert("Failed to Insert Data!");
+    	}
+	</script>
+    
+</head>
+
+<body>
+
+    <div class="container">
+    
+        <!-- LEFT SIDE IMAGE -->
+        <div class="left-section">
+            <div class="arch-bg">
+                <img src="../images/login2.png" class="arch" alt="Background Shape">
+                <img src="../images/signup1.png" class="person" alt="Person Illustration">
+            </div>
+        </div>
+
+        <!-- RIGHT SIDE FORM -->
+        <div class="right-section">
+
+            <h2>REGISTRATION</h2>
+
+            <!-- ⭐ FORM START ⭐ -->
+            <form action="../SignUp" method="post">
+
+                <div class="row">
+                    <div class="input-group half">
+                        <label>First Name</label>
+                        <div class="input-box">
+                            <input type="text" placeholder="Enter first name" name="first_name" required>
+                        </div>
+                    </div>
+
+                    <div class="input-group half">
+                        <label>Last Name</label>
+                        <div class="input-box">
+                            <input type="text" placeholder="Enter last name" name="last_name" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Mobile No.</label>
+                    <div class="input-box">
+                        <span class="icon">📞</span>
+                        <input type="number" placeholder="789456XXXX" name="mobile_number" required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Email</label>
+                    <div class="input-box">
+                        <span class="icon">📧</span>
+                        <input type="email" placeholder="email@gmail.com" name="email_id" required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Password</label>
+                    <div class="input-box">
+                        <span class="icon">🔒</span>
+                        <input type="password" placeholder="Enter your password" name="password" required>
+                        <span class="eye">👁️</span>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Gender</label>
+                    <div class="gender-box">
+                        <label><input type="radio" name="gender" value="male" required> Male</label>
+                        <label><input type="radio" name="gender" value="female"> Female</label>
+                    </div>
+                </div>
+
+                <button class="login-btn" name="action" value = "signup">Register</button>
+
+            </form>
+            <!-- ⭐ FORM END ⭐ -->
+
+            
+
+            <p class="signup-text">Already have an account? 
+                <a href="login.html">Login</a>
+            </p>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

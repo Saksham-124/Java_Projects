@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+        
+    <wb-module deploy-name="Arithmetic_Operation">
+                
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+                
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/apache-tomcat-11.0.14"/>
+                
+        <property name="context-root" value="Arithmetic_Operation"/>
+                
+        <property name="java-output-path" value="/Arithmetic_Operation/build/classes"/>
+            
+    </wb-module>
+    
+</project-modules>

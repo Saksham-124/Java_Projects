@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Login</title>
+    <link rel="stylesheet" href="../css/loginpage.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <h2>Employee Login</h2>
+
+            <form action="../checkLogin" method="post">
+
+                <label>Email</label>
+                <input type="email" placeholder="email@gmail.com" name = "email" required />
+
+                <label>Password</label>
+                <div class="password-wrapper">
+                    <input type="password" id="password" placeholder="Enter your password" class="password-input" name = "password" required />
+                    
+                    <!-- eye icon -->
+                    <img src="data:image/svg+xml;utf8,
+                    <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' stroke='%23888' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'>
+                    <path d='M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z'/>
+                    <circle cx='12' cy='12' r='3'/>
+                    </svg>" 
+                    id="toggleEye" onclick="togglePassword()" class="eye-icon" />
+                </div>
+
+                <button type="submit">Login</button>
+
+            </form>
+
+            <div class="small-text">
+                Don’t have an account? <a href="signup.html">Sign up</a>
+            </div>
+        </div>
+
+        <div class="right">
+            <img src="../images/login1.png" alt="Login Illustration" />
+        </div>
+    </div>
+
+<script>
+    function togglePassword() {
+        const pass = document.getElementById('password');
+        const eye = document.getElementById('toggleEye');
+
+        if (pass.type === 'password') {
+            pass.type = 'text';
+            eye.src = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' stroke='%23888' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M17.94 17.94A10.07 10.07 0 0112 20c-7 0-11-8-11-8a18.37 18.37 0 014.16-5.69M9.88 4.26A9.12 9.12 0 0112 4c7 0 11 8 11 8a18.5 18.5 0 01-2.16 3.19'/><line x1='1' y1='1' x2='23' y2='23'/></svg>";
+        } else {
+            pass.type = 'password';
+            eye.src = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' stroke='%23888' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z'/><circle cx='12' cy='12' r='3'/></svg>";
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+        
+    <wb-module deploy-name="Student Records">
+        <wb-resource deploy-path="/" source-path="/appClientModule" tag="defaultRootSource"/>
+                
+        <property name="java-output-path" value="/Student Records/build/classes"/>
+            
+    </wb-module>
+    
+</project-modules>

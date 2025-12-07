@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    border: 2px solid black;
+    padding: 20px;
+    width: 420px;          /* Enough space for 2 inputs */
+    max-width: 95%;        /* Mobile friendly */
+    box-sizing: border-box;
+}
+
+/* INPUTS ROW */
+.inputs {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+/* MAKE BOTH INPUTS FLEXIBLE BUT NEVER OVERFLOW */
+input[type="number"] {
+    flex: 1;
+    min-width: 0;          /* !! MOST IMPORTANT FIX */
+    padding: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* BUTTONS */
+.operate {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+input[type="submit"] {
+    padding: 8px 15px;
+    font-size: 16px;
+}
